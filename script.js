@@ -35,3 +35,5 @@ class Calculator {
         return x*y
     }
 }
+
+module.export = {capitalze, reverseString}
