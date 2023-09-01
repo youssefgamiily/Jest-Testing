@@ -1,6 +1,5 @@
 console.log("hello world")
 capitalize = (word) => {
-    console.log(typeof word)
     if(typeof word == "string" ) {
         console.log("in Line 5")
         let firstLetter = word[0].toUpperCase()
@@ -31,19 +30,56 @@ reverseString = (word) => {
     }
 }
 
-class Calculator {
-    constructor() {
-    }
-    add (x, y) {
-        return x + y
-    }
+// class Calculator {
+//     constructor() {
+//     }
+//     add (x, y) {
+//         return x + y
+//     }
 
-    divide (x,y ) {
-        return x/y
-    }
-    multiply (x,y ) {
-        return x*y
-    }
+//     divide (x,y ) {
+//         return x/y
+//     }
+//     multiply (x,y ) {
+//         return x*y
+//     }
+// }
+
+// ES5 class
+function Calculator() {
 }
 
-module.exports = {capitalize, reverseString}
+Calculator.prototype.add = function (x, y) {
+    if (typeof X != "number" || typeof y != "number") {
+        x = Number(x)
+        y = Number(y)
+    }
+    return x + y;
+};
+
+Calculator.prototype.divide = function (x, y) {
+    if (typeof X != "number" || typeof y != "number") {
+        x = Number(x)
+        y = Number(y)
+    }
+    return x / y;
+};
+
+Calculator.prototype.multiply = function (x, y) {
+    if (typeof X != "number" || typeof y != "number") {
+        x = Number(x)
+        y = Number(y)
+    }
+    return x * y;
+};
+Calculator.prototype.subtract = function (x, y) {
+    if (typeof X != "number" || typeof y != "number") {
+        x = Number(x)
+        y = Number(y)
+    }
+    return x- y;
+};
+
+const Calc = new Calculator()
+
+module.exports = {capitalize, reverseString, Calc}
